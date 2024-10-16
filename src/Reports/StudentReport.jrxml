@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StudentReport" pageWidth="612" pageHeight="792" whenNoDataType="AllSectionsNoDetail" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="bb65fb56-51c4-401b-937a-fcb8aee2d9a9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="32"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="2d4fd9be-3976-4109-b0d9-a7b59cc1c2f6"/>
+	<subDataset name="TableBot" uuid="871bd6d4-4e81-41d0-b1ec-f65c9f39c4eb">
+		<queryString language="SQL">
+			<![CDATA[select * from MidMarks]]>
+		</queryString>
+		<field name="ExamId" class="java.lang.Integer"/>
+		<field name="StudentId" class="java.lang.String"/>
+		<field name="ExamY" class="java.lang.String"/>
+		<field name="ExamT" class="java.lang.String"/>
+		<field name="Class" class="java.lang.String"/>
+		<field name="Math" class="java.lang.String"/>
+		<field name="SST" class="java.lang.String"/>
+		<field name="Eng" class="java.lang.String"/>
+		<field name="Sci" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\user\\Documents\\NetBeansProjects\\App1\\src\\Reports\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="StudntId" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="termb" class="java.lang.String"/>
+	<parameter name="yearb" class="java.lang.String"/>
+	<parameter name="termm" class="java.lang.String"/>
+	<parameter name="yearm" class="java.lang.String"/>
+	<parameter name="terme" class="java.lang.String"/>
+	<parameter name="yeare" class="java.lang.String"/>
+	<parameter name="Class" class="java.lang.String"/>
+	<parameter name="TotalMath" class="java.lang.String"/>
+	<parameter name="TotalEng" class="java.lang.String"/>
+	<parameter name="TotalSci" class="java.lang.String"/>
+	<parameter name="TotalSst" class="java.lang.String"/>
+	<parameter name="MathAggr" class="java.lang.String"/>
+	<parameter name="EngAggr" class="java.lang.String"/>
+	<parameter name="SciAggr" class="java.lang.String"/>
+	<parameter name="SstAggr" class="java.lang.String"/>
+	<parameter name="MathCom" class="java.lang.String"/>
+	<parameter name="EngCom" class="java.lang.String"/>
+	<parameter name="SciCom" class="java.lang.String"/>
+	<parameter name="SstCom" class="java.lang.String"/>
+	<parameter name="TotalAggr" class="java.lang.String"/>
+	<parameter name="Div" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from Students
+where StudentId=$P{StudntId}]]>
+	</queryString>
+	<field name="FirstName" class="java.lang.String"/>
+	<field name="MiddleName" class="java.lang.String"/>
+	<field name="LastName" class="java.lang.String"/>
+	<field name="POB" class="java.lang.String"/>
+	<field name="DOB" class="java.lang.String"/>
+	<field name="Class" class="java.lang.String"/>
+	<field name="StudentId" class="java.lang.String"/>
+	<field name="Age" class="java.lang.String"/>
+	<field name="Year" class="java.lang.String"/>
+	<field name="Gender" class="java.lang.String"/>
+	<field name="Email" class="java.lang.String"/>
+	<field name="Address" class="java.lang.String"/>
+	<field name="FName" class="java.lang.String"/>
+	<field name="MName" class="java.lang.String"/>
+	<field name="Mobile" class="java.lang.String"/>
+	<field name="PEmail" class="java.lang.String"/>
+	<field name="POR" class="java.lang.String"/>
+	<field name="Picture" class="java.lang.Object"/>
+	<filterExpression><![CDATA[new Boolean(true)]]></filterExpression>
+	<title>
+		<band height="139" splitType="Stretch">
+			<image>
+				<reportElement mode="Opaque" x="4" y="2" width="102" height="120" forecolor="#FFFFFF" backcolor="#330033" uuid="e9e92165-53e1-4ae7-8cdb-a758c7e9a9b3"/>
+				<imageExpression><![CDATA["C:/Users/user/JaspersoftWorkspace/Images/yellow-light-and-red-student-badge.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="107" y="94" width="462" height="30" forecolor="#0015FF" uuid="5b6f1e16-f361-4a5d-9fb0-6ac6c129e230"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<text><![CDATA[Mail: abdulnsamba@gmail.com Web: www.hammad.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="2" width="426" height="35" forecolor="#FF0026" uuid="5b2df1ea-f07d-4b01-8631-87938b3d1bd7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAMMAD INTERNATIONAL SCHOOL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="36" width="350" height="30" forecolor="#330033" uuid="fa2d379f-59f0-4f5b-8561-36190115db77"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<text><![CDATA[Plot 1 Russel Road Namanda Plaza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="69" width="456" height="25" forecolor="#660066" backcolor="#FFFFFF" uuid="7123d494-b93d-4b76-8830-81fccee74bf3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<text><![CDATA[Kampala, Uganda Tel: 256 783 555307, 256 703370037.]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="423" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="-13" width="571" height="1" uuid="579d9730-043e-4b0f-9789-b1ac1cccbc83"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="147" y="-11" width="250" height="30" uuid="826904b2-f8e3-4dea-bbe4-bcbdbe04dc4e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Student's Academic Report]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="176" y="44" width="106" height="30" uuid="e0964b00-df36-4360-ab51-d09d3bb2c8e6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MiddleName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="282" y="44" width="93" height="29" uuid="3b302761-9c06-462c-baa6-7eb9c5ff71a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LastName}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="77" y="67" width="298" height="1" uuid="52eadc92-e570-4d18-806f-34d031653d05"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="83" y="44" width="93" height="28" uuid="206e1b68-ce04-47d8-b337-9ba8c11f1244"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FirstName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="46" width="80" height="27" uuid="f759c0ce-1e8c-4285-8e1f-f02dd9f7f4a2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[FULL NAMES:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="83" y="38" width="162" height="1" uuid="8e5f21b0-1d4d-4997-9bdb-6a37dd70c0a1"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="4" y="14" width="94" height="30" uuid="bb516bf3-b733-4793-ab3d-204efd499103"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[Student's No:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="466" y="67" width="90" height="1" uuid="79832dbf-4fa4-490d-80e3-972219fa0998"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="427" y="43" width="43" height="30" uuid="aed182c6-bbc1-4265-822b-a1c3bb4a6536"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[CLASS:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="20" width="58" height="21" uuid="fb974961-29bc-4479-b8a2-73db52c78bb5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[DATE:]]></text>
+			</staticText>
+			<textField pattern="MMM d, yyyy">
+				<reportElement x="407" y="18" width="146" height="23" uuid="b260f5fb-e501-4a14-aec3-76a85b13c34a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="413" y="38" width="157" height="1" uuid="edb08940-6629-4f8b-b25e-aa19e034fe95"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="8" y="80" width="219" height="22" uuid="489358a8-21a7-428b-97df-2a9733c91784"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="15" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Bot marks out of 20%]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="8" y="102" width="219" height="137" uuid="8a37aecb-1114-41aa-94bc-1ac077f71d9e"/>
+				<subreportParameter name="StudntId">
+					<subreportParameterExpression><![CDATA[$P{StudntId}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="termb">
+					<subreportParameterExpression><![CDATA[$P{termb}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="yearb">
+					<subreportParameterExpression><![CDATA[$P{yearb}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "StudentReport_Bot.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="338" y="80" width="190" height="20" uuid="1df4bd62-42cc-4d5f-b1e3-75027a200a94"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="15" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Mid marks out of 30%]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="298" y="101" width="272" height="135" uuid="c09fc779-9c39-4db0-84ee-fd6603da5415"/>
+				<subreportParameter name="StudntId">
+					<subreportParameterExpression><![CDATA[$P{StudntId}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="termm">
+					<subreportParameterExpression><![CDATA[$P{termm}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="yearm">
+					<subreportParameterExpression><![CDATA[$P{yearm}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "Mid.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="4" y="304" width="559" height="118" uuid="fbb37f87-2935-4f79-9644-4f341ef1e9c7"/>
+				<subreportParameter name="StudntId">
+					<subreportParameterExpression><![CDATA[$P{StudntId}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TotalSst">
+					<subreportParameterExpression><![CDATA[$P{TotalSst}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SstAggr">
+					<subreportParameterExpression><![CDATA[$P{SstAggr}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="MathCom">
+					<subreportParameterExpression><![CDATA[$P{MathCom}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SstCom">
+					<subreportParameterExpression><![CDATA[$P{SstCom}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EngAggr">
+					<subreportParameterExpression><![CDATA[$P{EngAggr}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TotalSci">
+					<subreportParameterExpression><![CDATA[$P{TotalSci}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TotalMath">
+					<subreportParameterExpression><![CDATA[$P{TotalMath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="terme">
+					<subreportParameterExpression><![CDATA[$P{terme}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TotalEng">
+					<subreportParameterExpression><![CDATA[$P{TotalEng}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SciCom">
+					<subreportParameterExpression><![CDATA[$P{SciCom}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="yeare">
+					<subreportParameterExpression><![CDATA[$P{yeare}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="Div">
+					<subreportParameterExpression><![CDATA[$P{Div}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SciAggr">
+					<subreportParameterExpression><![CDATA[$P{SciAggr}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="TotalAggr">
+					<subreportParameterExpression><![CDATA[$P{TotalAggr}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="MathAggr">
+					<subreportParameterExpression><![CDATA[$P{MathAggr}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="EngCom">
+					<subreportParameterExpression><![CDATA[$P{EngCom}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "End.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="4" y="286" width="559" height="20" uuid="065c888f-6a9c-4dc5-97d9-05c005c9a815"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="15" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[End of terms Marks out of 50%]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="97" y="20" width="130" height="27" uuid="d2489e21-b8d3-41c2-89ea-5d07dce5353b"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{StudntId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="469" y="45" width="84" height="26" uuid="c82605de-c41f-4723-b1e0-997997e65d2f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Class}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<columnFooter>
+		<band height="93">
+			<staticText>
+				<reportElement x="3" y="62" width="83" height="30" uuid="645688e5-ce9c-48fd-b29d-47013bbf7339"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Head Teacher:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="81" y="85" width="303" height="1" uuid="97259512-108a-4b18-bddc-b746c0e3fa50"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="3" y="1" width="157" height="30" uuid="d8ff77c9-2d2e-49d7-943a-86c7f8ffd57f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[END OF TERM COMMENTS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="29" width="93" height="30" uuid="fac761c8-225b-4e5f-a1f4-578aaf5cc7ef"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Class Teacher:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="86" y="53" width="303" height="1" uuid="54bbe2a8-1930-45cf-9a11-248aa5eaa4d7"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="474" y="46" width="63" height="30" uuid="bb3bd4b7-e1b5-4032-adb8-dd4fe6ebb272"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="16"/>
+				</textElement>
+				<text><![CDATA[Stamp]]></text>
+			</staticText>
+			<ellipse>
+				<reportElement x="438" y="25" width="126" height="62" uuid="200495d5-a13a-4096-91d4-57b0b8556d03"/>
+			</ellipse>
+			<staticText>
+				<reportElement x="472" y="38" width="63" height="30" uuid="98b1bb60-5188-4000-aaa2-b96b44c6e3ef"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial Black" size="16"/>
+				</textElement>
+				<text><![CDATA[Stamp]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="2" width="305" height="30" uuid="403ac6b7-11e6-48fb-8367-e91fb40c4d8d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[This is an auto generated report, Please do not alter.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="2" width="249" height="30" uuid="95408f95-f6e4-4e8c-a7ee-2d51b538d2f3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Developed by AR Technologies Ltd]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

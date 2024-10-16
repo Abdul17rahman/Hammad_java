@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="mystudents" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="1f48471f-11c0-4748-aab8-10047c1fd3c3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="New Dataset 1" uuid="4e951640-c077-4a79-8fe7-2e989fdb41e4">
+		<queryString language="SQL">
+			<![CDATA[select * from Students]]>
+		</queryString>
+		<field name="FirstName" class="java.lang.String"/>
+		<field name="MiddleName" class="java.lang.String"/>
+		<field name="LastName" class="java.lang.String"/>
+		<field name="POB" class="java.lang.String"/>
+		<field name="DOB" class="java.lang.String"/>
+		<field name="Class" class="java.lang.String"/>
+		<field name="StudentId" class="java.lang.String"/>
+		<field name="Age" class="java.lang.String"/>
+		<field name="Year" class="java.lang.String"/>
+		<field name="Gender" class="java.lang.String"/>
+		<field name="Email" class="java.lang.String"/>
+		<field name="Address" class="java.lang.String"/>
+		<field name="FName" class="java.lang.String"/>
+		<field name="MName" class="java.lang.String"/>
+		<field name="Mobile" class="java.lang.String"/>
+		<field name="PEmail" class="java.lang.String"/>
+		<field name="POR" class="java.lang.String"/>
+		<field name="Picture" class="java.lang.Object"/>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[select * from Students]]>
+	</queryString>
+	<field name="FirstName" class="java.lang.String"/>
+	<field name="MiddleName" class="java.lang.String"/>
+	<field name="LastName" class="java.lang.String"/>
+	<field name="POB" class="java.lang.String"/>
+	<field name="DOB" class="java.lang.String"/>
+	<field name="Class" class="java.lang.String"/>
+	<field name="StudentId" class="java.lang.String"/>
+	<field name="Age" class="java.lang.String"/>
+	<field name="Year" class="java.lang.String"/>
+	<field name="Gender" class="java.lang.String"/>
+	<field name="Email" class="java.lang.String"/>
+	<field name="Address" class="java.lang.String"/>
+	<field name="FName" class="java.lang.String"/>
+	<field name="MName" class="java.lang.String"/>
+	<field name="Mobile" class="java.lang.String"/>
+	<field name="PEmail" class="java.lang.String"/>
+	<field name="POR" class="java.lang.String"/>
+	<field name="Picture" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="292" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="0" width="555" height="292" uuid="3cd56371-ed2a-482f-8af3-272a16eab641"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" whenNoDataType="AllSectionsNoDetail">
+					<datasetRun subDataset="New Dataset 1" uuid="56e385d2-38ac-425e-bd88-eccbc1349b5e">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource(1)]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="e172975f-1035-4ca2-a342-90d87fd1dcf3">
+						<jr:tableHeader height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="30" uuid="de47bd37-6419-447a-b7f5-b1d7dcbc7375"/>
+								<textFieldExpression><![CDATA[$F{FirstName}]]></textFieldExpression>
+							</textField>
+						</jr:tableHeader>
+						<jr:tableFooter height="30" rowSpan="1"/>
+						<jr:columnHeader height="30" rowSpan="1"/>
+						<jr:columnFooter height="30" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="90" uuid="9cfcf062-5171-476f-bcf6-010c83caf41a">
+						<jr:tableHeader height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="30" uuid="b16e3458-e4c5-4dc8-9659-7712118f2d23"/>
+								<textFieldExpression><![CDATA[$F{MiddleName}]]></textFieldExpression>
+							</textField>
+						</jr:tableHeader>
+						<jr:tableFooter height="30" rowSpan="1"/>
+						<jr:columnHeader height="30" rowSpan="1"/>
+						<jr:columnFooter height="30" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="90" uuid="6afbf85b-e11b-4dc8-8917-622dcf49bbff">
+						<jr:tableHeader height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="30" uuid="0a6cea0c-212b-48fa-9d03-779c5eeeb149"/>
+								<textFieldExpression><![CDATA[$F{LastName}]]></textFieldExpression>
+							</textField>
+						</jr:tableHeader>
+						<jr:tableFooter height="30" rowSpan="1"/>
+						<jr:columnHeader height="30" rowSpan="1"/>
+						<jr:columnFooter height="30" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1"/>
+					</jr:column>
+					<jr:column width="90" uuid="efbae613-7b9f-4b51-b9dc-fb1b9e3db835">
+						<jr:tableHeader height="30" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="30" uuid="5d7a3f95-158a-4d69-b52b-7a802b094801"/>
+								<textFieldExpression><![CDATA[$F{POB}]]></textFieldExpression>
+							</textField>
+						</jr:tableHeader>
+						<jr:tableFooter height="30" rowSpan="1"/>
+						<jr:columnHeader height="30" rowSpan="1"/>
+						<jr:columnFooter height="30" rowSpan="1"/>
+						<jr:detailCell height="20" rowSpan="1"/>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="3" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

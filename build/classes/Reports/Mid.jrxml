@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Mid" pageWidth="278" pageHeight="278" columnWidth="278" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="8d1b0bf5-b5dd-488a-a0e6-3ede646f21c6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="StudntId" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+	<parameter name="termm" class="java.lang.String"/>
+	<parameter name="yearm" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from MidMarks
+where StudentId=$P{StudntId} and ExamT=$P{termm} and ExamY=$P{yearm}]]>
+	</queryString>
+	<field name="ExamId" class="java.lang.Integer"/>
+	<field name="StudentId" class="java.lang.String"/>
+	<field name="ExamY" class="java.lang.String"/>
+	<field name="ExamT" class="java.lang.String"/>
+	<field name="Class" class="java.lang.String"/>
+	<field name="Math" class="java.lang.String"/>
+	<field name="SST" class="java.lang.String"/>
+	<field name="Eng" class="java.lang.String"/>
+	<field name="Sci" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="251" splitType="Stretch">
+			<staticText>
+				<reportElement x="4" y="5" width="59" height="28" uuid="2e32486f-a3e6-4ecb-bc07-f589748b1e7a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Term:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="55" y="4" width="77" height="30" uuid="69e0e6a6-e33e-4798-a785-199cb8d71a7b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{termm}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="54" y="28" width="79" height="1" uuid="31687f5f-77dc-4875-a8f6-cfc6d019f13e"/>
+				<graphicElement>
+					<pen lineWidth="1.75" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="135" y="4" width="59" height="28" uuid="0b17a258-a7b4-46c9-bbf7-e445cfb89dba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Year:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="186" y="3" width="77" height="30" uuid="1e4d4528-b862-40a9-888b-f155a1659b07"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{yearm}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="185" y="27" width="79" height="1" uuid="277ce2b0-4822-4c1d-9258-ac85cfa15cff"/>
+				<graphicElement>
+					<pen lineWidth="1.75" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="35" y="43" width="100" height="26" uuid="c83c1471-5c3c-400a-b81d-43df8d29dd9c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUBJECT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="43" width="100" height="26" uuid="a6803e4a-6ade-44a6-add2-7dc121dd192f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MARKS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="134" y="69" width="101" height="27" uuid="cac99ee2-d87d-44d1-b7b5-447546dab7aa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Math}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="96" width="101" height="27" uuid="4aaaa33c-be60-4b12-a1ab-71b3555de7e8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Eng}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="122" width="101" height="27" uuid="a315b6d2-4df0-486a-b33e-03d6a1b8bc5a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Sci}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="148" width="101" height="27" uuid="c09d28e4-055b-42f3-86d0-62d61a66ce62"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SST}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="35" y="69" width="100" height="26" uuid="bd6cf32e-7fa6-4f07-beec-716db6047c80"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[MATH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="95" width="100" height="26" uuid="f780202d-b065-4bf3-a101-dbd830098327"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ENG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="121" width="100" height="28" uuid="e6792890-0726-479b-955f-009c748b5a73"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[SCI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="149" width="100" height="26" uuid="56d9b862-7602-4240-b678-f0cb904ec5d0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[SST]]></text>
+			</staticText>
+			<line>
+				<reportElement x="33" y="175" width="201" height="1" uuid="c969809c-8c3c-4663-aa07-06985adab239"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="34" y="43" width="201" height="1" uuid="29a9bfd7-290f-4633-8efc-2086ffcc0a9e"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="35" y="148" width="201" height="1" uuid="61a7b857-e5ea-4615-9359-7932d5b6c552"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="34" y="121" width="201" height="1" uuid="9aebab9d-70b2-4e6a-97e8-e69a2e12ea40"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="34" y="95" width="201" height="1" uuid="d93ff08d-25fd-4551-8a6b-4bef5622c5d8"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="35" y="69" width="201" height="1" uuid="c702bf02-5ac4-44fc-aaf9-a3d9316403b9"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="34" y="44" width="1" height="136" uuid="be8ea06e-0edf-455d-aeca-8a5d19da448d"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="134" y="45" width="1" height="136" uuid="2236599f-0542-430a-9e0e-0b296f7dd79c"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="235" y="45" width="1" height="136" uuid="c44a9594-c3ed-4d4a-85a1-ddfae963183a"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+</jasperReport>

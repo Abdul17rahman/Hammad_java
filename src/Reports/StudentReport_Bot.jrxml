@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StudentReport_Bot" pageWidth="278" pageHeight="200" whenNoDataType="AllSectionsNoDetail" columnWidth="278" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="26c058cb-5070-4f97-908a-8a0afda0809e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="StudntId" class="java.lang.String"/>
+	<parameter name="termb" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="yearb" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from BotMarks
+where StudentId=$P{StudntId} and ExamT=$P{termb} and ExamY=$P{yearb}]]>
+	</queryString>
+	<field name="ExamID" class="java.lang.Integer"/>
+	<field name="StudentId" class="java.lang.String"/>
+	<field name="ExamY" class="java.lang.String"/>
+	<field name="ExamT" class="java.lang.String"/>
+	<field name="Class" class="java.lang.String"/>
+	<field name="Math" class="java.lang.String"/>
+	<field name="SST" class="java.lang.String"/>
+	<field name="Eng" class="java.lang.String"/>
+	<field name="Sci" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="200" splitType="Stretch">
+			<staticText>
+				<reportElement x="45" y="123" width="85" height="30" uuid="4741a2f6-8b60-4820-891b-d0c60f995c59">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[SCI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="153" width="85" height="30" uuid="e7524ade-4d89-4965-b603-ae7b18e0f975">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16"/>
+				</textElement>
+				<text><![CDATA[SST]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="33" width="85" height="30" uuid="8da802f3-7d7e-49cd-96ed-e488c5a22cad"/>
+				<box>
+					<pen lineWidth="1.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUBJECT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="63" width="85" height="30" uuid="a87efec4-ef4d-4eb2-bb1d-e37de36b10d9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[MATH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="93" width="85" height="30" uuid="882c439a-5447-49a0-96c1-1e779137d7c3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[ENG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="130" y="33" width="85" height="31" uuid="7a78e42b-32bd-403f-8819-5f1c4b7909e7"/>
+				<box>
+					<pen lineWidth="1.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MARKS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="61" y="2" width="72" height="27" uuid="cb39495b-0a59-4e8e-96cb-627321c0e28a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{termb}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="1" width="56" height="27" uuid="7eee476e-1fea-4e05-982e-dc65bd4ae1b7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Term:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="48" y="26" width="75" height="1" uuid="7d0f2330-2e92-480d-947c-c404b884a2d6"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="193" y="25" width="75" height="1" uuid="f6ba3150-05cb-4e39-9992-00ea32c37300"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="194" y="3" width="71" height="27" uuid="18397a89-690d-45b4-93de-02e0edf0a5c3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{yearb}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="142" y="2" width="51" height="27" uuid="d9cd6feb-0283-47c1-8963-073d5f8a5eb9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Year:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="132" y="64" width="85" height="29" backcolor="#FFFFFF" uuid="845e8fac-998a-496c-ab40-d2072bbe8bb2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Math}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="132" y="93" width="85" height="30" backcolor="#FFFFFF" uuid="4d737b0f-8717-4809-87e3-6aa540282c77"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Eng}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="132" y="124" width="85" height="29" backcolor="#FFFFFF" uuid="fff4d092-0edd-4e10-ad92-cd983215f13d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Sci}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="153" width="85" height="32" backcolor="#FFFFFF" uuid="c45959cd-8810-4585-b4cb-29fbe21c952a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SST}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement mode="Opaque" x="214" y="60" width="1" height="122" uuid="dcba7fc7-3b33-40e7-9c7d-59678e8e06a8"/>
+				<graphicElement>
+					<pen lineWidth="1.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement mode="Opaque" x="131" y="93" width="84" height="1" uuid="1ee79a78-0d39-4ba9-b580-2668f94d23ad"/>
+				<graphicElement>
+					<pen lineWidth="1.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement mode="Opaque" x="130" y="122" width="84" height="1" uuid="5338d83c-ec13-4d99-9644-a9b61de8ea71"/>
+				<graphicElement>
+					<pen lineWidth="1.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement mode="Opaque" x="131" y="152" width="84" height="1" uuid="9ee46423-12dd-456d-9abd-2059fb3c95d3"/>
+				<graphicElement>
+					<pen lineWidth="1.75"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement mode="Opaque" x="131" y="183" width="84" height="1" uuid="ede90b77-aae3-4fe3-b980-dc7d12f64cad"/>
+				<graphicElement>
+					<pen lineWidth="1.75"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+</jasperReport>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4868c7c6-cb78-4b56-bade-9d8fa10f5566">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Records" uuid="e2a31f54-80ce-48e2-a1be-037da9d2b3f8">
+		<parameter name="PaymentYear" class="java.lang.String"/>
+		<parameter name="PaymentTerm" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select * from StudentsAcct where Year=$P{PaymentYear}
+and Term = $P{PaymentTerm}]]>
+		</queryString>
+		<field name="StudentId" class="java.lang.String"/>
+		<field name="Year" class="java.lang.String"/>
+		<field name="PayDetails" class="java.lang.String"/>
+		<field name="Amount" class="java.lang.String"/>
+		<field name="Date" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="PaymentYear" class="java.lang.String"/>
+	<parameter name="PaymentTerm" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from StudentsAcct where Year=$P{PaymentYear}
+and Term = $P{PaymentTerm}]]>
+	</queryString>
+	<field name="StudentId" class="java.lang.String"/>
+	<field name="Year" class="java.lang.String"/>
+	<field name="Term" class="java.lang.String"/>
+	<field name="Date" class="java.lang.String"/>
+	<field name="Amount" class="java.lang.String"/>
+	<field name="PayNo" class="java.lang.Integer"/>
+	<field name="PayDetails" class="java.lang.String"/>
+	<title>
+		<band height="136" splitType="Stretch">
+			<image>
+				<reportElement mode="Opaque" x="3" y="3" width="87" height="120" forecolor="#FFFFFF" backcolor="#330033" uuid="a228dbfe-bbb8-490c-bb44-eb717fb34a1c"/>
+				<imageExpression><![CDATA["C:/Users/user/JaspersoftWorkspace/Images/yellow-light-and-red-student-badge.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="98" y="67" width="456" height="25" forecolor="#660066" backcolor="#FFFFFF" uuid="c819fd86-991a-46ca-9f7e-a7f073e99489"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<text><![CDATA[Kampala, Uganda Tel: 256 783 555307, 256 703370037.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="0" width="426" height="35" forecolor="#FF0026" uuid="69e674cd-f06a-4511-a813-e1f48d11aed6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HAMMAD INTERNATIONAL SCHOOL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="34" width="350" height="30" forecolor="#330033" uuid="1937f3be-9420-4ecb-8b4c-497d9893f8d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<text><![CDATA[Plot 1 Russel Road Namanda Plaza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="92" width="462" height="30" forecolor="#0015FF" uuid="7ad7db62-fc98-4008-9eb5-97de89a6f330"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<text><![CDATA[Mail: abdulnsamba@gmail.com Web: www.hammad.com]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="487" splitType="Stretch">
+			<staticText>
+				<reportElement x="101" y="3" width="350" height="30" forecolor="#330033" uuid="b6e04e6c-3d1b-4160-808b-5805d89900ea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Payments Search Results]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="79" width="66" height="32" uuid="1024e631-479d-4e44-843c-a0d8bfdc624e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[YEAR:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="56" y="105" width="133" height="1" uuid="c0027d47-6906-4c3b-a503-cdbd5e919318"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="416" y="104" width="133" height="1" uuid="f3dac06b-6031-482e-aa56-e1efc5c5ff22"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="363" y="78" width="66" height="32" uuid="500b5db7-1816-4a11-8ae9-f2fe4b5454ec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TERM:]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="165" y="36" width="211" height="32" uuid="74dc39b4-d420-4027-b33e-9d32b21e76a8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement key="table 1" style="table 1" x="3" y="130" width="546" height="343" uuid="6328e12b-26b8-4721-9d65-95c6ddae2e73"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Records" uuid="e18f2e21-bbbd-432e-889a-8a4659af5389">
+						<datasetParameter name="PaymentYear">
+							<datasetParameterExpression><![CDATA[$P{PaymentYear}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="PaymentTerm">
+							<datasetParameterExpression><![CDATA[$P{PaymentTerm}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="120" uuid="5383c535-30a5-471e-8dfa-f238623c31b3">
+						<jr:columnHeader style="table 1_CH" height="36" rowSpan="1">
+							<staticText>
+								<reportElement x="1" y="0" width="119" height="36" uuid="9f25edcf-c256-4776-8e0b-57a1f8eacb3e"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Student ID]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="37" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="118" height="37" uuid="07a578ee-bbf9-4df9-bc56-f42cb0bd65e8"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{StudentId}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="137" uuid="6ccdcb71-a1b1-4fd4-b8da-5c0717bdec55">
+						<jr:columnHeader style="table 1_CH" height="36" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="137" height="36" uuid="80f30725-cafa-495f-9390-14eeb73265e8"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Payment Details]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="37" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="137" height="37" uuid="038cca68-24c1-424d-b163-4e44ddeba6ab"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{PayDetails}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="129" uuid="042ebf08-110a-4244-8da9-f1bba85e74c2">
+						<jr:columnHeader style="table 1_CH" height="36" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="129" height="36" uuid="263d77d9-1329-4fe2-abd0-07df87c9fc20"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Amount ]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="37" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="129" height="37" uuid="6e378707-d962-4de3-a4e5-e90958064e19"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{Amount}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="155" uuid="d6e25ed0-6a8d-4b6d-a4f5-1b17f0591bb4">
+						<jr:columnHeader style="table 1_CH" height="36" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="155" height="36" uuid="22d90fe1-1649-4e4e-a488-55d680d6093f"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Date]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="37" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="155" height="37" uuid="98a3bc03-99e7-43bb-8f3b-aca43346b14f"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField>
+				<reportElement x="69" y="79" width="120" height="32" uuid="781b150b-91c8-407a-89a6-453df7d6c89c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PaymentYear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="78" width="120" height="32" uuid="1fdd1d23-cff2-4546-af91-ab2b43254f7e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PaymentTerm}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+</jasperReport>
