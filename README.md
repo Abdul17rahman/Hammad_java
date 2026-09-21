@@ -81,3 +81,19 @@ The project includes **JasperReports** and **iReport** resources for generating 
 ## License
 
 No license specified. Contact the repository owner ([Abdul17rahman](https://github.com/Abdul17rahman)) for usage permissions.
+
+## Project Screenshots 
+
+<img width="1920" height="1080" alt="1729070725664" src="https://github.com/user-attachments/assets/06090ea9-0a2f-45d1-b56b-f5badc2da488" />
+
+<img width="1606" height="978" alt="bandicam 2023-11-23 21-37-56-438" src="https://github.com/user-attachments/assets/aca48081-2ebb-4847-b49d-a67ef1dbe05b" />
+
+<img width="1606" height="978" alt="bandicam 2023-11-23 21-47-57-330" src="https://github.com/user-attachments/assets/c8cdb6a5-ec3c-4592-8bf9-a9d6f8e0d7f2" />
+
+<img width="1606" height="978" alt="bandicam 2023-11-23 21-42-15-256" src="https://github.com/user-attachments/assets/eb68abf6-f9b8-46df-b88b-32598848e96e" />
+
+<img width="568" height="749" alt="20231123_215142" src="https://github.com/user-attachments/assets/63dbcb9b-5ceb-4fb8-be3f-38fa1165f52a" />
+
+
+
+
